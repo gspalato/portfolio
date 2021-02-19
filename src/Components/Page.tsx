@@ -20,11 +20,36 @@ var ContentContainer = styled('div', {
         flex: {
             default: {
                 display: 'flex',
+            }
+        },
+        direction: {
+            row: {
+                flexDirection: 'row',
+            },
+            column: {
+                flexDirection: 'column',
+            }
+        },
+        justify: {
+            start: {
+                justifyContent: 'flex-start',
+            },
+            center: {
+                justifyContent: 'center',
+            },
+            end: {
+                justifyContent: 'flex-end',
+            }
+        },
+        align: {
+            start: {
+                alignItems: 'flex-start',
             },
             center: {
                 alignItems: 'center',
-                display: 'flex',
-                justifyContent: 'center',
+            },
+            end: {
+                alignItems: 'flex-end',
             }
         }
     }
@@ -42,7 +67,7 @@ export const Page: React.FC<IPageProps> = props => {
             <BackgroundContainer>
                 
             </BackgroundContainer>
-            <ContentContainer flex="center">
+            <ContentContainer flex="default" direction="column" justify="center" align="center">
                 {props.children}
             </ContentContainer>
         </React.Fragment>
