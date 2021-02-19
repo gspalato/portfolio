@@ -67,7 +67,7 @@ export const Page: React.FC<IPageProps> = props => {
             <BackgroundContainer>
                 
             </BackgroundContainer>
-            <ContentContainer flex="default" direction="column" justify="center" align="center">
+            <ContentContainer direction="column" justify="center" align="center">
                 {props.children}
             </ContentContainer>
         </React.Fragment>

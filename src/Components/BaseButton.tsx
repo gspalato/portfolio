@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { styled, css } from '../stitches.config';
+import React from 'react';
+import { motion, MotionStyle } from 'framer-motion';
+import { styled } from '../stitches.config';
 
 // Styles
 var Button = styled(motion.button, {
@@ -15,7 +15,6 @@ var Button = styled(motion.button, {
 	fontSize: '.675vw',
 	fontWeight: 500,
 	justifyContent: 'center',
-	letterSpacing: '0.2px',
 	lineHeight: '2.375rem',
 	padding: '0 1rem',
 	textAlign: 'center',
@@ -24,9 +23,6 @@ var Button = styled(motion.button, {
 	userSelect: 'none',
 	verticalAlign: 'middle',
 
-	'&:hover': {
-		
-	},
 	'&:focus': {
 		border: 'none',
 		outline: 'none',
@@ -38,12 +34,10 @@ var Button = styled(motion.button, {
 				background: '$disabledgray',
 				color: '$black',
 				cursor: 'default',
-				'&:hover': {
-					boxShadow: 'none'
-				},
-				'&:focus': {
-					
-				},
+			},
+			success: {
+				background: '$vividgreen',
+
 			}
 		}
 	}
@@ -51,29 +45,40 @@ var Button = styled(motion.button, {
 
 // Component
 interface IBaseButtonProps {
-	disabled?: boolean,
-	id?: string,
+	id?: string
+	isDisabled?: boolean,
 	isLoading?: boolean,
+	isSuccessful?: boolean,
 	label?: string,
 	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
+	style?: MotionStyle,
 };
 
 export const BaseButton: React.FC<IBaseButtonProps> = props => {
 	const buttonRef: React.RefObject<HTMLButtonElement> = React.createRef();
 
-	function isDisabled() {
-		var { disabled, isLoading } = props;
-		return disabled || isLoading;
+	function isDisabled(): boolean {
+		var { isDisabled, isLoading } = props;
+		return (isDisabled ?? false) || (isLoading ?? false);
+	}
+
+	function getStyleMode(): "success" | "disabled" | undefined {
+		return props.isSuccessful
+			? "success"
+			: props.isDisabled
+				? "disabled"
+				: undefined;
 	}
 
 	return (
 		<Button
 		id={props.id}
 		disabled={isDisabled()}
-		mode={isDisabled() ? "disabled" : undefined}
+		mode={getStyleMode()}
 		onClick={props.onClick}
-		whileTap={{ scale: .95 }}
-		ref={buttonRef}>
+		whileTap={{ scale: .985, transition: { duration: .0 } }}
+		ref={buttonRef}
+		style={{ ...props.style }}>
 			{props.label || props.children}
 		</Button>
 	);

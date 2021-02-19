@@ -9,6 +9,7 @@ export const { styled, css } = createStyled({
             $black: '#000000',
             $disabledgray: '#98989d',
             $vividblue: '#06f',
+            $vividgreen: '#28cd41',
 
             $spectrumGradient: `linear-gradient(94.75deg,
                 rgb(5, 157, 255) 0%,
@@ -23,7 +24,7 @@ export const { styled, css } = createStyled({
 
             $helveticaNeue: 'Helvetica Neue, apple-system, sans-serif',
             $inter: 'Inter, apple-system, sans-serif',
-            $publicSans: 'Public Sans, apple-system, sans-serif',
+            $roboto: 'Roboto, apple-system, sans-serif',
         }
     },
     breakpoints: {},

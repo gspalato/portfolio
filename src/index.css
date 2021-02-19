@@ -5,9 +5,7 @@ html, body {
 	height: 100%;
   	width: 100%;
 
-  	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    	sans-serif;
+  	font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	text-rendering: geometricPrecision;
@@ -15,15 +13,18 @@ html, body {
 }
 
 code {
-  	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    	monospace;
+  	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 /**/
 
 #root, .app {
-  	height: 100%;
+  	min-height: 100%;
+	height: fit-content;
   	width: 100%;
+}
+.app {
+	height: 100%;
 }
 
 /**/
