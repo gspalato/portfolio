@@ -1,7 +1,7 @@
 import { createStyled } from '@stitches/react';
 
 export const { styled, css } = createStyled({
-    prefix: 'gs-',
+    prefix: 'gs',
     tokens: {
         colors: {
             $backgroundColor: '$black',
@@ -22,6 +22,7 @@ export const { styled, css } = createStyled({
             $paragraphFont: '$helveticaNeue',
 
             $helveticaNeue: 'Helvetica Neue, apple-system, sans-serif',
+            $inter: 'Inter, apple-system, sans-serif',
             $publicSans: 'Public Sans, apple-system, sans-serif',
         }
     },
