@@ -1,0 +1,45 @@
+.hero_text_glow {
+	text-shadow: 0 0 20px #ffffff55;
+}
+
+.hero_text_glow_experimental {
+	text-shadow:
+		0 -5px 10px rgba(0, 60, 255, 0.267),
+		0 5px 10px rgba(255, 0, 149, 0.1),
+		0 -5px 25px rgba(255, 255, 255, 0.3);
+}
+
+.hero_background_glow {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 300px;
+	background-image: linear-gradient(
+		to right,
+		transparent 5%,
+		#f2f2f2 50%,
+		transparent 95%
+	);
+	border-radius: 2000px;
+	opacity: 0.3;
+	filter: blur(100px);
+	aspect-ratio: 1/1;
+}
+
+.hero_background_glow_left {
+	left: 0%;
+	transform: translate(-100%, -50%);
+}
+
+.hero_background_glow_right {
+	right: 0%;
+	transform: translate(100%, -50%);
+}
+
+.hero_background_glow_center {
+	left: 50%;
+	width: 50% !important;
+	transform: translate(-50%, -50%);
+	opacity: 0.2 !important;
+	aspect-ratio: 16/9;
+}

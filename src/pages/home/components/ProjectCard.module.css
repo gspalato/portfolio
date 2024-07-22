@@ -1,0 +1,18 @@
+.card_external_arrow {
+	transition: all;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide_external {
+	from {
+		transform: translate(0px, 0px);
+	}
+
+	50% {
+		transform: translate(-2px, 2px);
+	}
+
+	to {
+		transform: translate(5px, -5px);
+	}
+}
