@@ -1,0 +1,17 @@
+{
+	"workbench.editor.showTabs": "none",
+	"files.trimTrailingWhitespace": true,
+	"breadcrumbs.enabled": false,
+	"editor.lightbulb.enabled": "off",
+	"editor.wordWrap": "on",
+
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+		["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+		["classes\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+	],
+
+	"vscode_custom_css.imports": [
+		"file:///C:/Users/spala/OneDrive/Documentos/VSCode/theme.css"
+	]
+}

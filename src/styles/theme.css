@@ -1,0 +1,116 @@
+@theme {
+	/* Light Mode */
+	--color-light-background: rgb(240, 240, 240);
+
+	--color-light-text: rgb(0, 0, 0);
+	--color-light-text-secondary: rgb(64 64 64);
+	--color-light-text-tertiary: rgb(163 163 163);
+
+	/* Dark Mode */
+	--color-dark-background: hsl(240 10% 3.9%);
+	--color-dark-primary: hsl(0 0% 98%);
+	--color-dark-primary-foreground: hsl(0 0% 9%);
+
+	--color-dark-text: #f0f0f0;
+	--color-dark-text-secondary: #bbbbbb;
+	--color-dark-text-tertiary: #777777;
+
+	--color-dark-overlay-1: rgba(242, 242, 242, 0.05);
+	--color-dark-overlay-2: rgba(242, 242, 242, 0.1);
+	--color-dark-overlay-3: rgba(242, 242, 242, 0.25);
+	--color-dark-overlay-4: rgba(242, 242, 242, 0.5);
+	--color-dark-overlay-5: rgba(242, 242, 242, 0.75);
+
+	--color-dark-muted: hsl(0 0% 14.9%);
+	--color-dark-muted-foreground: hsl(0 0% 63.9%);
+
+	--color-dark-border: hsl(0 0% 14.9%);
+	--color-dark-input: hsl(0 0% 14.9%);
+	--color-dark-ring: hsl(0 0% 83.1%);
+
+	/* Colors */
+	--color-light-accent: #f0dcfffb;
+
+	--color-dark-bg: rgb(23, 23, 23);
+
+	--color-gray-50: #ffffff;
+	--color-gray-100: #f0f0f0;
+	--color-gray-200: #eeeeee;
+	--color-gray-300: #a6a6a6;
+	--color-gray-400: #8c8c8c;
+	--color-gray-500: #737373;
+	--color-gray-600: #595959;
+	--color-gray-700: #404040;
+	--color-gray-800: #262626;
+	--color-gray-850: #191919;
+	--color-gray-900: #111111;
+	--color-gray-950: #0c0c0c;
+
+	--color-satin-50: oklch(92.44% 0.008 293.9);
+	--color-satin-100: oklch(84.73% 0.017 293.7);
+	--color-satin-200: oklch(69.63% 0.033 291.49);
+	--color-satin-300: oklch(53.35% 0.048 292.07);
+	--color-satin-400: oklch(39.25% 0.032 289.66);
+	--color-satin-500: oklch(22.68% 0.015 290.85);
+	--color-satin-600: oklch(20.46% 0.014 291.68);
+	--color-satin-700: oklch(17.49% 0.008 285.52);
+	--color-satin-800: oklch(15.22% 0.007 300.8);
+	--color-satin-900: oklch(11.05% 0.007 308.95);
+	--color-satin-950: oklch(8.6% 0.006 285.17);
+
+	--color-light-overlay-50: rgba(0, 0, 0, 0.05);
+	--color-light-overlay-100: rgba(0, 0, 0, 0.1);
+	--color-light-overlay-200: rgba(0, 0, 0, 0.2);
+	--color-light-overlay-300: rgba(0, 0, 0, 0.25);
+	--color-light-overlay-400: rgba(0, 0, 0, 0.5);
+	--color-light-overlay-500: rgba(0, 0, 0, 0.75);
+
+	--shadow-light-border: box-shadow: inset 0px 0px 0px 1px
+		var(--color-light-overlay-100);
+
+	--color-dark-overlay-50: rgba(255, 255, 255, 0.05);
+	--color-dark-overlay-100: rgba(255, 255, 255, 0.1);
+	--color-dark-overlay-200: rgba(255, 255, 255, 0.2);
+	--color-dark-overlay-300: rgba(255, 255, 255, 0.25);
+	--color-dark-overlay-400: rgba(255, 255, 255, 0.5);
+	--color-dark-overlay-500: rgba(255, 255, 255, 0.75);
+
+	--shadow-dark-border: box-shadow: inset 0px 0px 0px 1px
+		var(--color-dark-overlay-50);
+
+	--background-image-light-glow: radial-gradient(
+		50% 75% at 50% 0%,
+		var(--color-light-overlay-50) 0%,
+		var(--color-gray-50) 98.64864864864865%
+	);
+
+	--background-image-dark-glow: radial-gradient(
+		50% 75% at 50% 0%,
+		var(--color-dark-overlay-100) 0%,
+		var(--color-gray-950) 98.64864864864865%
+	);
+
+	/* Fonts */
+	--font-family-display: var(--font-family-instrument-serif), sans-serif;
+	--font-family-title: var(--font-family-inter), sans-serif;
+	--font-family-body: var(--font-geist-sans), sans-serif;
+	--font-family-mono: 'Geist Mono', monospace;
+
+	--font-family-inter: 'Inter', sans-serif;
+	--font-family-geist: 'Geist', sans-serif;
+	--font-family-karla: 'Karla', sans-serif;
+	--font-family-manrope: 'Manrope', sans-serif;
+	--font-family-syne: 'Syne', sans-serif;
+
+	/* Custom sizes */
+	--spacing-nav: 100px;
+	--spacing-content: 90vw;
+	--spacing-content-lg: 600px;
+
+	/* Animations */
+	--animation-intro: intro 0.2s ease-in-out forwards;
+	--animation-flip: flip 6s infinite steps(2, end);
+	--animation-rotate: rotate 3s linear infinite both;
+	--animation-spotlight: spotlight 2s ease 0.75s 1 forwards;
+	--animation-wave: wave 2.5s infinite;
+}
