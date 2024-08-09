@@ -114,7 +114,7 @@ const Page: React.FC<Props> = (props) => {
 	return (
 		<PageWrapper className='flex h-screen w-full items-center'>
 			<div className='w-content md:w-content-lg pb-[100px]'>
-				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 overflow-hidden py-10'>
+				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 overflow-hidden pt-10 pb-7'>
 					<Typography.Title className='animate-intro flex items-center gap-3 text-2xl leading-[1.5rem] ![animation-delay:100ms]'>
 						<Image
 							src='/img/portrait.jpg'
@@ -139,9 +139,14 @@ const Page: React.FC<Props> = (props) => {
 							</Link>
 						))}
 					</div>
+					<Badge
+						icon='pulse'
+						text='Available for work'
+						className='justify-start p-0 pt-3 pl-1 font-medium italic tracking-tight shadow-none ![box-shadow:none] dark:text-gray-600'
+					/>
 				</section>
 				<div className='h-px w-full bg-gray-500/20' />
-				<section className='container !sm:pb-0 animate-intro relative flex w-full flex-col gap-3 py-10'>
+				<section className='container !sm:pb-0 animate-intro relative flex w-full flex-col gap-3 py-7'>
 					<Typography.Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:400ms]'>
 						Selected Work
 					</Typography.Title>
@@ -154,7 +159,7 @@ const Page: React.FC<Props> = (props) => {
 						)}
 					</div>
 				</section>
-				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 py-10'>
+				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 py-7'>
 					<Typography.Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:600ms]'>
 						Skills
 					</Typography.Title>
@@ -170,7 +175,7 @@ const Page: React.FC<Props> = (props) => {
 						))}
 					</div>
 				</section>
-				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 py-10'>
+				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 py-7'>
 					<Typography.Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:800ms]'>
 						Work
 					</Typography.Title>
