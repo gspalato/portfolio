@@ -59,10 +59,17 @@ const Page: React.FC<Props> = (props) => {
 			banner_url: '',
 		},
 		{
-			name: 'Ether',
-			description: 'The back-end that powers my portfolio.',
+			name: 'Project Oni',
+			description: 'An in-development chat platform.',
 			url: '',
-			repository_url: 'https://github.com/gspalato/ether',
+			repository_url: 'https://github.com/theoniorg/services',
+			banner_url: '',
+		},
+		{
+			name: 'neo',
+			description: 'A general-purpose discord bot made in Go.',
+			url: '',
+			repository_url: 'https://github.com/gspalato/neo',
 			banner_url: '',
 		},
 		{
@@ -141,7 +148,7 @@ const Page: React.FC<Props> = (props) => {
 					<div className='animate-intro flex flex-col gap-2 ![animation-delay:500ms]'>
 						{success && <Projects {...css.tabProps} />}
 						{(!success || projects.length === 0) && (
-							<Typography.Text className='font-body text-md text-gray-200 dark:text-gray-800'>
+							<Typography.Text className='font-body text-md text-gray-300 dark:text-gray-700'>
 								No projects found.
 							</Typography.Text>
 						)}
