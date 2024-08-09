@@ -66,6 +66,7 @@ export const Projects: React.FC<{ tabs: Tab[] }> = ({ tabs }) => {
 			>
 				{tabs.map((item, index) => (
 					<ProjectCard
+						key={index}
 						item={item}
 						index={index}
 						hoveredTabIndex={hoveredTabIndex!}
