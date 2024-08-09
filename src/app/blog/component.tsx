@@ -41,6 +41,11 @@ const Component: React.FC<Props> = (props) => {
 				</section>
 				<div className='h-px w-full bg-gray-500/20' />
 				<section className='container !sm:pb-0 animate-intro relative flex w-full flex-col gap-3 py-10'>
+					{posts.length === 0 && (
+						<Typography.Text className='font-body text-md text-gray-300 dark:text-gray-700'>
+							No posts yet.
+						</Typography.Text>
+					)}
 					<Posts {...css.tabProps} />
 				</section>
 			</div>
