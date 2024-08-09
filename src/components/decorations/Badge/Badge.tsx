@@ -36,7 +36,8 @@ const Component: React.FC<Props> = React.forwardRef<HTMLDivElement, Props>(
 				'tracking-[.3px]',
 				'shadow-md',
 				'backdrop-blur-sm',
-				//'bg-light-glow dark:bg-dark-glow',
+				'font-inter',
+				'font-[300]',
 				'inner-border',
 			],
 			className,
@@ -59,7 +60,7 @@ const Component: React.FC<Props> = React.forwardRef<HTMLDivElement, Props>(
 				) : (
 					icon
 				)}
-				<span className='font-inter font-[300]'>{text}</span>
+				<span>{text}</span>
 			</div>
 		);
 	},
