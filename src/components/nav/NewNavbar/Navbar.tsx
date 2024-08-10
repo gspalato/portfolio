@@ -24,7 +24,7 @@ const active = (path: string) => {
 	else return 0;
 };
 
-export default () => {
+const Component: React.FC = () => {
 	const pathname = usePathname();
 
 	const [selected, setSelected] = useState<number>(active(pathname));
@@ -79,6 +79,9 @@ export default () => {
 		</div>
 	);
 };
+Component.displayName = 'Navbar';
+
+export default Component;
 
 type Props = {
 	selectedTabIndex: number;

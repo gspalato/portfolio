@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Link } from 'next-view-transitions';
 import {
 	CSSProperties,
@@ -11,10 +10,9 @@ import {
 } from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
 
-import Typography from '@components/typography';
+import Text from '@components/typography/Text/Text';
 
 import cn from '@lib/classes';
-import { Tab } from '@lib/hooks/useTabs';
 
 export const Posts: React.FC<{ tabs: any[] }> = ({ tabs }) => {
 	const [hoveredTabIndex, setHoveredTabIndex] = useState<number | null>(null);
@@ -127,12 +125,12 @@ const PostCard: React.FC<{
 					)}
 				</h3>
 				<div className='flex w-full flex-row justify-between'>
-					<Typography.Text className='font-inter pointer-events-none text-sm tracking-tight dark:text-gray-500'>
+					<Text className='font-inter pointer-events-none text-sm tracking-tight dark:text-gray-500'>
 						{item.description}
-					</Typography.Text>
-					<Typography.Text className='font-inter pointer-events-none text-sm italic tracking-tight dark:text-gray-500'>
+					</Text>
+					<Text className='font-inter pointer-events-none text-sm italic tracking-tight dark:text-gray-500'>
 						{item.date ?? '00/00/0000'}
-					</Typography.Text>
+					</Text>
 				</div>
 			</Link>
 		</>

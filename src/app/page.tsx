@@ -16,5 +16,6 @@ const Page = async () => {
 
 	return <Home />;
 };
+Page.displayName = 'HomePage';
 
 export default Page;

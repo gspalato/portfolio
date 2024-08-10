@@ -13,5 +13,6 @@ const Page = async () => {
 
 	return <PageComponent projectFetchResult={result} />;
 };
+Page.displayName = 'ProjectsPage';
 
 export default Page;

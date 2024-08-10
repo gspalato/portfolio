@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 
 import PageWrapper from '@components/page/PageWrapper/PageWrapper';
-import Typography from '@components/typography';
+import Text from '@components/typography/Text/Text';
+import Title from '@components/typography/Title/Title';
 
 import { Posts } from './components/Posts';
 
@@ -32,19 +33,19 @@ const Component: React.FC<Props> = (props) => {
 		<PageWrapper className='flex h-screen w-full items-center'>
 			<div className='w-content md:w-content-lg pb-[100px]'>
 				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 py-10'>
-					<Typography.Title className='animate-intro text-lg font-medium leading-[1.125rem]'>
+					<Title className='animate-intro text-lg font-medium leading-[1.125rem]'>
 						Posts
-					</Typography.Title>
-					<Typography.Text className='animate-intro font-inter text-base leading-[1rem] tracking-tight text-gray-500 ![animation-delay:200ms]'>
+					</Title>
+					<Text className='animate-intro font-inter text-base leading-[1rem] tracking-tight text-gray-500 ![animation-delay:200ms]'>
 						Infrequent posts about tech or something.
-					</Typography.Text>
+					</Text>
 				</section>
 				<div className='h-px w-full bg-gray-500/20' />
 				<section className='container !sm:pb-0 animate-intro relative flex w-full flex-col gap-3 py-10'>
 					{posts.length === 0 && (
-						<Typography.Text className='font-body text-md text-gray-300 dark:text-gray-700'>
+						<Text className='font-body text-md text-gray-300 dark:text-gray-700'>
 							No posts yet.
-						</Typography.Text>
+						</Text>
 					)}
 					<Posts {...css.tabProps} />
 				</section>
@@ -52,6 +53,6 @@ const Component: React.FC<Props> = (props) => {
 		</PageWrapper>
 	);
 };
-Component.displayName = 'Blog';
+Component.displayName = 'BlogPageComponent';
 
 export default Component;

@@ -1,19 +1,13 @@
 'use client';
 
-import {
-	motion,
-	MotionProps,
-	useMotionTemplate,
-	useMotionValue,
-} from 'framer-motion';
+import { motion, MotionProps, useMotionValue } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React, { CSSProperties, useEffect } from 'react';
+import React from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
 
-import Typography from '@components/typography';
-
-import PerspectiveCard from '@/components/cards/PerspectiveCard/PerspectiveCard';
+import Text from '@components/typography/Text/Text';
+import Title from '@components/typography/Title/Title';
 
 import cn from '@lib/classes';
 
@@ -93,9 +87,9 @@ const Component: React.FC<Props> = (props) => {
 					width={1000}
 				/>
 				<div className='info flex w-full items-center justify-between pt-1'>
-					<Typography.Title className='font-title w-full text-justify !text-3xl font-bold text-gray-950 dark:text-gray-50'>
+					<Title className='font-title w-full text-justify !text-3xl font-bold text-gray-950 dark:text-gray-50'>
 						{title}
-					</Typography.Title>
+					</Title>
 					<GoArrowUpRight
 						size={25}
 						className={cn(
@@ -104,9 +98,9 @@ const Component: React.FC<Props> = (props) => {
 						)}
 					/>
 				</div>
-				<Typography.Text className='description font-inter text-sm tracking-wide text-gray-900 dark:text-gray-100'>
+				<Text className='description font-inter text-sm tracking-wide text-gray-900 dark:text-gray-100'>
 					{description}
-				</Typography.Text>
+				</Text>
 			</div>
 		</motion.div>
 	);

@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { MdArrowForwardIos } from 'react-icons/md';
 
-import Typography from '@components/typography';
+import Text from '@components/typography/Text/Text';
 
 import cn from '@lib/classes';
 
@@ -40,9 +40,9 @@ const Component: React.FC<Props> = (props) => {
 						<MdArrowForwardIos />
 					</span>
 				</h3>
-				<Typography.Text className='font-inter pointer-events-none text-sm tracking-tight text-gray-500 select-none'>
+				<Text className='font-inter pointer-events-none text-sm tracking-tight text-gray-500 select-none'>
 					{date}
-				</Typography.Text>
+				</Text>
 			</div>
 			<AnimatePresence>
 				{isExpanded && description && (

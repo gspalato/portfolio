@@ -5,7 +5,9 @@ import React from 'react';
 import Badge from '@components/decorations/Badge/Badge';
 import Divider from '@components/decorations/Divider/Divider';
 import PageWrapper from '@components/page/PageWrapper/PageWrapper';
-import Typography from '@components/typography';
+import Subtitle from '@components/typography/Subtitle/Subtitle';
+import Text from '@components/typography/Text/Text';
+import Title from '@components/typography/Title/Title';
 
 import cn from '@/lib/classes';
 
@@ -68,17 +70,18 @@ const Component: React.FC<Props> = (props) => {
 		<PageWrapper className='flex items-center' includeNavbarPadding>
 			<section className='container relative flex flex-col items-center justify-center gap-3 py-10'>
 				<Badge text='Experience' />
-				<Typography.Title className='font-title px-2 text-center text-5xl font-bold tracking-tight'>
+				<Title className='font-title px-2 text-center text-5xl font-bold tracking-tight'>
 					My work history.
-				</Typography.Title>
-				<Typography.Subtitle className='font-body break-normal px-4 text-center text-sm tracking-wide text-gray-800 md:max-w-[600px] dark:text-gray-300'>
+				</Title>
+				<Subtitle className='font-body break-normal px-4 text-center text-sm tracking-wide text-gray-800 md:max-w-[600px] dark:text-gray-300'>
 					Here's a brief overview of my professional background.
-				</Typography.Subtitle>
+				</Subtitle>
 			</section>
 			<Divider className='mx-auto w-2/3' />
 			<section className='container flex h-auto w-full flex-col items-center gap-6 pt-10 px-10'>
-				{Timeline.map((x) => (
+				{Timeline.map((x, i) => (
 					<div
+						key={i}
 						className={cn(
 							'relative',
 							'flex',
@@ -109,24 +112,20 @@ const Component: React.FC<Props> = (props) => {
 								'rounded-full',
 							)}
 						/>
-						<Typography.Subtitle className='text-gray-800 dark:text-gray-300'>
+						<Subtitle className='text-gray-800 dark:text-gray-300'>
 							{x.date}
-						</Typography.Subtitle>
-						<Typography.Title className='font-display'>
-							{x.role}
-						</Typography.Title>
-						<Typography.Subtitle className=''>
+						</Subtitle>
+						<Title className='font-display'>{x.role}</Title>
+						<Subtitle className=''>
 							{x.place} | {x.mode}
-						</Typography.Subtitle>
-						<Typography.Text className=''>
-							{x.description}
-						</Typography.Text>
+						</Subtitle>
+						<Text className=''>{x.description}</Text>
 					</div>
 				))}
 			</section>
 		</PageWrapper>
 	);
 };
-Component.displayName = 'ExperiencePage';
+Component.displayName = 'ExperiencePageComponent';
 
 export default Component;

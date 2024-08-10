@@ -65,5 +65,6 @@ const Component: React.FC<Props> = React.forwardRef<HTMLDivElement, Props>(
 		);
 	},
 );
+Component.displayName = 'Badge';
 
 export default Component;

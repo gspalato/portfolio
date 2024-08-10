@@ -1,6 +1,5 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import {
 	CSSProperties,
@@ -11,7 +10,7 @@ import {
 } from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
 
-import Typography from '@components/typography';
+import Text from '@components/typography/Text/Text';
 
 import cn from '@lib/classes';
 import { Tab } from '@lib/hooks/useTabs';
@@ -123,9 +122,9 @@ const ProjectCard: React.FC<{
 						<GoArrowUpRight className='mt-1 ml-1 text-base text-neutral-500' />
 					)}
 				</h3>
-				<Typography.Text className='font-inter pointer-events-none text-sm tracking-tight dark:text-gray-500'>
+				<Text className='font-inter pointer-events-none text-sm tracking-tight dark:text-gray-500'>
 					{item.description}
-				</Typography.Text>
+				</Text>
 			</Link>
 		</>
 	);

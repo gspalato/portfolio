@@ -1,14 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Masonry } from 'react-plock';
 
 import ProjectCard from '@components/cards/ProjectCard/ProjectCard';
 import Badge from '@components/decorations/Badge/Badge';
 import Divider from '@components/decorations/Divider/Divider';
 import PageWrapper from '@components/page/PageWrapper/PageWrapper';
-
-import Typography from '@/components/typography';
+import Subtitle from '@components/typography/Subtitle/Subtitle';
+import Title from '@components/typography/Title/Title';
 
 import { $Either } from '@lib/types/either';
 
@@ -38,15 +37,15 @@ const Component: React.FC<Props> = (props) => {
 		<PageWrapper className='flex items-center' includeNavbarPadding>
 			<section className='container relative flex flex-col items-center justify-center gap-3 py-10'>
 				<Badge text='Featured Projects' />
-				<Typography.Title className='font-title px-2 text-center text-5xl font-bold tracking-tight'>
+				<Title className='font-title px-2 text-center text-5xl font-bold tracking-tight'>
 					My recent work.
-				</Typography.Title>
-				<Typography.Subtitle className='font-body px-4 text-center text-sm tracking-wide text-gray-800 md:max-w-[600px] dark:text-gray-300'>
+				</Title>
+				<Subtitle className='font-body px-4 text-center text-sm tracking-wide text-gray-800 md:max-w-[600px] dark:text-gray-300'>
 					Check out some of the projects I've worked on recently.
 					<br />
 					These showcase my skills in full-stack (and a bit of
 					systems) development.
-				</Typography.Subtitle>
+				</Subtitle>
 			</section>
 			<Divider className='mx-auto w-2/3' />
 			<section className='container flex h-auto w-full flex-col py-10 px-8 md:w-[clamp(600px,60vw,800px)]'>

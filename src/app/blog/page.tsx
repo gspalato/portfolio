@@ -1,18 +1,19 @@
+import { Metadata } from 'next';
 import React from 'react';
 
 import getPosts from '@lib/posts';
 
 import Blog from './component';
 
-type Props = {
-	className?: string;
-} & React.PropsWithChildren;
+export const metadata: Metadata = {
+	title: 'spxlato · Blog',
+};
 
-const Component: React.FC<Props> = async (props) => {
+const Page: React.FC = async () => {
 	const posts = await getPosts();
 
 	return <Blog posts={posts} />;
 };
-Component.displayName = 'Blog';
+Page.displayName = 'BlogPage';
 
-export default Component;
+export default Page;

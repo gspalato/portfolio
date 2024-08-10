@@ -25,7 +25,7 @@ export const getPosts = cache(async () => {
 				const { data, content } = matter(postContent);
 
 				if (data.published === false) {
-					return null;
+					return undefined;
 				}
 
 				return {
@@ -37,7 +37,7 @@ export const getPosts = cache(async () => {
 	);
 });
 
-export async function getPost(id: string) {
+export async function getPost(id: string): Promise<Post | undefined> {
 	const posts = await getPosts();
 	return posts.find((post) => post!.id === id);
 }

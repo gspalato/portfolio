@@ -1,6 +1,5 @@
 'use client';
 
-import { LayoutGroup, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -9,20 +8,18 @@ import { FadeLoader } from 'react-spinners';
 
 import Badge from '@components/decorations/Badge/Badge';
 import PageWrapper from '@components/page/PageWrapper/PageWrapper';
-import Typography from '@components/typography';
+import Text from '@components/typography/Text/Text';
+import Title from '@components/typography/Title/Title';
 
 import ExperienceEntry from './components/ExperienceEntry';
 import { Projects } from './components/Projects';
 
 import cn from '@lib/classes';
 import { useTabs } from '@lib/hooks/useTabs';
-import { $Either } from '@lib/types/either';
 
 import { ExperienceTimeline } from '@data/experience';
 import { Skills } from '@data/skills';
 import { Socials } from '@data/socials';
-
-import Styles from '../page.module.css';
 
 type Props = {
 	//projectFetchResult: $Either.Type<Project[], string>;
@@ -115,7 +112,7 @@ const Page: React.FC<Props> = (props) => {
 		<PageWrapper className='flex h-screen w-full items-center'>
 			<div className='w-content md:w-content-lg pb-[100px]'>
 				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 overflow-hidden pt-10 pb-7'>
-					<Typography.Title className='animate-intro flex items-center gap-3 text-2xl leading-[1.5rem] ![animation-delay:100ms]'>
+					<Title className='animate-intro flex items-center gap-3 text-2xl leading-[1.5rem] ![animation-delay:100ms]'>
 						<Image
 							src='/img/portrait.jpg'
 							alt=''
@@ -124,13 +121,14 @@ const Page: React.FC<Props> = (props) => {
 							width={256}
 						/>
 						Gabriel Spalato Marques
-					</Typography.Title>
-					<Typography.Text className='animate-intro font-inter text-base leading-[1rem] tracking-tight text-gray-500 ![animation-delay:200ms]'>
+					</Title>
+					<Text className='animate-intro font-inter text-base leading-[1rem] tracking-tight text-gray-500 ![animation-delay:200ms]'>
 						Full-stack developer & computer engineering student.
-					</Typography.Text>
+					</Text>
 					<div className='animate-intro flex flex-row gap-4 pt-1 ![animation-delay:300ms]'>
 						{Object.entries(Socials).map((e) => (
 							<Link
+								key={e[0]}
 								href={e[1]}
 								className='font-inter inline text-xs font-[500] italic leading-[.875rem] text-gray-500 hover:text-gray-600 hover:dark:text-gray-400'
 							>
@@ -147,22 +145,22 @@ const Page: React.FC<Props> = (props) => {
 				</section>
 				<div className='h-px w-full bg-gray-500/20' />
 				<section className='container !sm:pb-0 animate-intro relative flex w-full flex-col gap-3 py-7'>
-					<Typography.Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:400ms]'>
+					<Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:400ms]'>
 						Selected Work
-					</Typography.Title>
+					</Title>
 					<div className='animate-intro flex flex-col gap-2 ![animation-delay:500ms]'>
 						{success && <Projects {...css.tabProps} />}
 						{(!success || projects.length === 0) && (
-							<Typography.Text className='font-body text-md text-gray-300 dark:text-gray-700'>
+							<Text className='font-body text-md text-gray-300 dark:text-gray-700'>
 								No projects found.
-							</Typography.Text>
+							</Text>
 						)}
 					</div>
 				</section>
 				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 py-7'>
-					<Typography.Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:600ms]'>
+					<Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:600ms]'>
 						Skills
-					</Typography.Title>
+					</Title>
 					<div className='animate-intro flex flex-row flex-wrap gap-2 ![animation-delay:700ms]'>
 						{Skills.toSorted().map((s, i) => (
 							<Badge
@@ -176,9 +174,9 @@ const Page: React.FC<Props> = (props) => {
 					</div>
 				</section>
 				<section className='container !sm:pb-0 relative flex w-full flex-col gap-3 py-7'>
-					<Typography.Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:800ms]'>
+					<Title className='animate-intro pb-2 text-lg font-medium leading-[1.5rem] ![animation-delay:800ms]'>
 						Work
-					</Typography.Title>
+					</Title>
 					<div className='animate-intro flex flex-col gap-1 ![animation-delay:900ms]'>
 						{ExperienceTimeline.map((v, i) => (
 							<ExperienceEntry
@@ -195,5 +193,6 @@ const Page: React.FC<Props> = (props) => {
 		</PageWrapper>
 	);
 };
+Page.displayName = 'HomePageComponent';
 
 export default Page;

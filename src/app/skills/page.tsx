@@ -9,5 +9,6 @@ export const metadata: Metadata = {
 const Page = () => {
 	return <PageComponent />;
 };
+Page.displayName = 'SkillsPage';
 
 export default Page;
