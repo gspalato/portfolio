@@ -9,7 +9,7 @@ export const ExperienceTimeline: {
 		role: 'Software Developer',
 		place: 'G.WIND',
 		mode: 'Freelance',
-		date: 'June 2024 - July 2024',
+		date: 'Jun 2024 - Jul 2024',
 		description: (
 			<>
 				• Developed a repair and task management bot, synchronized to
@@ -27,7 +27,7 @@ export const ExperienceTimeline: {
 		role: 'Software Developer',
 		place: 'G.WIND',
 		mode: 'Freelance',
-		date: 'October 2023 - November 2023',
+		date: 'Oct 2023 - Nov 2023',
 		description: (
 			<>
 				• Developed an image upload automation and automatic report
